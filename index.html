@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruds</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="inputs">
+            <h1>CRUDS</h1>
+            <h3>Product management system</h3>
+            <div class="title">
+                <input type="text" placeholder="title" id="title">
+            </div>
+            <div class="price">
+                <input type="number" placeholder="price" id="price" onkeyup="gettotal()">
+                <input type="number" placeholder="taxes" id="taxes" onkeyup="gettotal()">
+                <input type="number" placeholder="ads" id="ads" onkeyup="gettotal()">
+                <input type="number" placeholder="discount" id="discount" onkeyup="gettotal()">
+                <small id="total"></small>
+            </div>
+            <div class="count">
+                <input type="text" placeholder="count" id="count">
+            </div>
+            <div class="category">
+                <input type="text" placeholder="category" id="category">
+            </div>
+            <div class="create" onclick="creat()"><button id="submit">create</button></div>
+        </div>
+        <div class="outputs">
+            <div class="search" >
+                <input onkeyup="searchDate(this.value)" type="text" placeholder="search" id="search">
+            </div>
+            <div class="btnsearch">
+                <button onclick="getsearch(this.id)" id="searchtitle">Search By Title</button>
+                <button onclick="getsearch(this.id)" id="searchcategory">Search By Category</button>
+            </div>
+            <div id="deleteall">
+                <button onclick="deleteall()" id="delall">Delete All</button>
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+
+                    <tbody id="tbody">
+                    <!--       
+                        <tr>
+                            <th>1</th>
+                            <th>iphone</th>
+                            <th>500</th>
+                            <th>100</th>
+                            <th>100</th>
+                            <th>30</th>
+                            <th>2500</th>
+                            <th>phone</th>
+                            <th><button id="update">update</button></th>
+                            <th><button id="delete">delete</button></th>
+                        </tr>
+                     -->
+                    </tbody>
+
+
+
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
